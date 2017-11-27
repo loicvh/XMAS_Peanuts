@@ -1,0 +1,4 @@
+for f in ~/Documents/ProjetPerso/People/*.pdf;  
+do 
+rm ${f}
+done;
