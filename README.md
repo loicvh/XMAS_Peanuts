@@ -48,3 +48,6 @@
 <ul>
 	<li>Add the function with the template and you will only need to change that file and not Sendmail.</li>
 </ul>
+
+</body>
+</html>
