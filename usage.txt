@@ -1,0 +1,5 @@
+sh run
+./sendmail
+
+Police gimp : Accanthis ADF Std
+(note that sh sendmail may not work)

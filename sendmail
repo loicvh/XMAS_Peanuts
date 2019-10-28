@@ -2,7 +2,7 @@
 # A Simple Shell Script To Get Linux Network Information
 # Adapted from Vivek Gite - 30/Aug/2009 by LVH - 2017
 
-# value=$(< template2019)
+#value=$(< template2019)
 
 for file in People/*.pdf;  
 
@@ -12,7 +12,7 @@ year=$(date +%Y)
 file=${file##*/}
 echo ${file}
 nameyear=${file%.*} 
-echo ${nameyear}
+echo ${year}
 name=${nameyear/${year}/} 
 echo ${name}
 while read -r first_name mail; do
