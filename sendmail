@@ -1,37 +1,30 @@
 #!/bin/bash
 # A Simple Shell Script To Get Linux Network Information
-# Vivek Gite - 30/Aug/2009
+# Adapted from Vivek Gite - 30/Aug/2009 by LVH - 2017
 
-for file in ~/Documents/ProjetPerso/People/*.pdf;  
+# value=$(< template2019)
+
+for file in People/*.pdf;  
 
 do
 
 year=$(date +%Y)
 file=${file##*/}
+echo ${file}
 nameyear=${file%.*} 
+echo ${nameyear}
 name=${nameyear/${year}/} 
-
+echo ${name}
 while read -r first_name mail; do
+	# echo ${first_name}
+	# echo ${name}
 	if [ "${name}" == "${first_name}" ]  
 	then
 		mail_to_send=${mail} 
+echo ${mail_to_send}
+sendemail -f cacahuete.xmas.vh@gmail.com -t ${mail_to_send} -u "[${year} VH CACAHUETE] Official Selection" -a People/${nameyear}.pdf -s smtp.gmail.com:587 -o tls=yes -xu cacahuete.xmas.vh@gmail.com -xp HardPassword -o message-file="template2019.html" -o message-content-type=html -o message-charset=utf-8
 	fi
 done < "data/mail"
-
-sendemail -f cacahuete.xmas.vh@gmail.com -t ${mail_to_send} -u [2K17 VH CACAHUETE]\ Official\ Selection  -m "Bonjour, bonsoir, bonté, boncafé ${name};
-
-J'ai le privilège, que dis-je, l'immense plaisir de t'inviter à participer aux - Oh combien renommées - cacahuètes de la famille VH. Le principe est simple, tu offres un cadeau d'une valeur de 15 euros à une personne piochée au hasard : ta "cacahuète". Tu reçois évidemment un cadeau d'une autre personne, ton "cacahuèteur".
-
-
-Concrètement, comment cela se passe : joint-à ce message, tu trouveras un fichier .pdf dans lequel tu trouveras le nom de ta cacahuète ! Chut, ne le dit surtout à personne !
-
-Je te fais de gros bisous,
-
-Loïc.
-
-ps: Si jamais tu as un problème pour lire le fichier, qu'il n'y a pas de fichier ou que tu dois offrir un cadeau à toi-même, fais le moi savoir !
-pps: Réponds moi pour me dire si tu as bien reçu :)" -a ~/Documents/ProjetPerso/People/${nameyear}.pdf -s smtp.gmail.com:587 -o tls=yes -xu cacahuete.xmas.vh@gmail.com -xp HardPassword  -o message-charset=utf-8 
-
 
 
 done;

@@ -1,6 +1,6 @@
 
 
-for f in ~/Documents/ProjetPerso/People/*.txt;  
+for f in People/*.txt;  
 do 
 FILENAME=${f%%.*}
 enscript -B  -p ${FILENAME}.ps ${f};
@@ -8,7 +8,7 @@ ps2pdf ${FILENAME}.ps ${FILENAME}.pdf
 rm ${f}
 done;
 
-for f in ~/Documents/ProjetPerso/People/*.ps;  
+for f in People/*.ps;  
 do 
 rm ${f}
 done;
