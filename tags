@@ -4,13 +4,23 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Family	Programme Noel.py	/^class Family:$/;"	c
 Family	Programme_Noel.py	/^class Family:$/;"	c
+__init__	Programme Noel.py	/^	def __init__(self,array):$/;"	m	class:Family
 __init__	Programme_Noel.py	/^	def __init__(self,array):$/;"	m	class:Family
+getArray	Programme Noel.py	/^	def getArray(self):$/;"	m	class:Family
 getArray	Programme_Noel.py	/^	def getArray(self):$/;"	m	class:Family
+getNum	Programme Noel.py	/^	def getNum(self):$/;"	m	class:Family
 getNum	Programme_Noel.py	/^	def getNum(self):$/;"	m	class:Family
+getPeople	Programme Noel.py	/^	def getPeople(self,n):$/;"	m	class:Family
 getPeople	Programme_Noel.py	/^	def getPeople(self,n):$/;"	m	class:Family
+getSantas	Programme Noel.py	/^def getSantas():$/;"	f
 getSantas	Programme_Noel.py	/^def getSantas():$/;"	f
+main	Programme Noel.py	/^def main(year):$/;"	f
 main	Programme_Noel.py	/^def main(year):$/;"	f
+now	Programme Noel.py	/^now = datetime.datetime.now()$/;"	v
 now	Programme_Noel.py	/^now = datetime.datetime.now()$/;"	v
+shuffle	Programme Noel.py	/^	def shuffle(self):$/;"	m	class:Family
 shuffle	Programme_Noel.py	/^	def shuffle(self):$/;"	m	class:Family
+trueShuffle	Programme Noel.py	/^def trueShuffle(fam1):$/;"	f
 trueShuffle	Programme_Noel.py	/^def trueShuffle(fam1):$/;"	f

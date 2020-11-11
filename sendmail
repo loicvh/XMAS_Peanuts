@@ -22,7 +22,7 @@ while read -r first_name mail; do
 	then
 		mail_to_send=${mail} 
 echo ${mail_to_send}
-sendemail -f cacahuete.xmas.vh@gmail.com -t ${mail_to_send} -u "[${year} VH CACAHUETE] Official Selection" -a People/${nameyear}.pdf -s smtp.gmail.com:587 -o tls=yes -xu cacahuete.xmas.vh@gmail.com -xp HardPassword -o message-file="template2019.html" -o message-content-type=html -o message-charset=utf-8
+sendemail -f cacahuete.xmas.vh@gmail.com -t ${mail_to_send} -u "[${year} VH CACAHUETE] Official Selection" -a People/${nameyear}.pdf -s smtp.gmail.com:587 -o tls=yes -xu cacahuete.xmas.vh@gmail.com -xp HardPassword -o message-file="template${year}.html" -o message-content-type=html -o message-charset=utf-8
 	fi
 done < "data/mail"
 
