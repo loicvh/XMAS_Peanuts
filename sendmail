@@ -4,6 +4,10 @@
 
 #value=$(< template2019)
 
+PSWD=''
+EMAIL=cacahuete.xmas.vh@gmail.com
+SMTP=smtp.gmail.com:587
+
 for file in People/*.pdf;  
 
 do
@@ -22,7 +26,7 @@ while read -r first_name mail; do
 	then
 		mail_to_send=${mail} 
 echo ${mail_to_send}
-sendemail -f cacahuete.xmas.vh@gmail.com -t ${mail_to_send} -u "[${year} VH CACAHUETE] Official Selection" -a People/${nameyear}.pdf -s smtp.gmail.com:587 -o tls=yes -xu cacahuete.xmas.vh@gmail.com -xp HardPassword -o message-file="template${year}.html" -o message-content-type=html -o message-charset=utf-8
+sendemail -f ${EMAIL} -t ${mail_to_send} -u "[${year} VH CACAHUETE] Official Selection" -a People/${nameyear}.pdf -s ${SMTP} -xu ${EMAIL} -xp ${PSWD} -o tls=yes -o message-file="template${year}.html" -o message-content-type=html message-charset=utf-8 
 	fi
 done < "data/mail"
 

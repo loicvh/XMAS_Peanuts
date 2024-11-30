@@ -1,2 +1,3 @@
+bash clean
 python3 Programme_Noel.py 
 ./ConvertToPdf
